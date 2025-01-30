@@ -1,0 +1,11 @@
+from google.colab import files
+import pandas as pd
+
+# upload the files from local system
+uploaded = files.upload()
+
+# Get the filesname of the uploaded files
+aaa = list(uploaded.keys())[0]
+
+df = pd.read_csv(aaa)
+print(df)
